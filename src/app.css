@@ -1,0 +1,412 @@
+.app {
+    background-color: #fafaf9;
+    height: 100vh;
+    overflow: scroll;
+}
+
+.html{
+    background-color: #fafaf9;
+}
+
+/* .slds-card{
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+} */
+
+
+/* evo-force START */
+
+@font-face {
+    font-family: 'Pru-Modern';
+    src: url('./../fileclaim/assets/fonts/webfonts/prudentialmodern-medium-webfont.woff2') format('woff2'),
+         url('./../fileclaim/assets/fonts/webfonts/prudentialmodern-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+.help-content[c-claimsSubmissionDigital_claimsSubmissionDigital]{
+    text-align: left;
+    padding-top: 15px;
+}
+
+.cards[c-claimsSubmissionDigital_claimsSubmissionDigital]{
+    padding: 5px;
+    width: 350px;
+}
+
+.slds-card{
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.slds-card__footer{
+    border-top: 0px solid rgb(255, 255, 255);
+}
+
+/*Text formatting for breadcrumbs (since variables effect full page)*/
+.slds-breadcrumb{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/*Set width for dropdown input*/
+.slds-input_faux{
+    width: 30%;
+}
+
+/*Set box highlight on focus/selct for dropdown input*/
+.slds-combobox__input.slds-has-focus, .slds-combobox__input:focus{
+    border-color: var(--pru-link-blue);
+    border: 2px solid var(--pru-link-blue);
+    box-shadow: 0 0 0px white;
+}
+
+/*Set width for dropdown menu*/
+.slds-dropdown--fluid, .slds-dropdown_fluid{
+    width: 30%;
+}
+
+/*Set font size for dropdown menu items*/
+.slds-dropdown{
+    font-size: 1rem;
+    
+}
+
+
+/*Formatting for dropdown menu items when has focus*/
+.slds-listbox--vertical .slds-listbox__option.slds-has-focus, .slds-listbox--vertical .slds-listbox__option:focus, .slds-listbox--vertical .slds-listbox__option:hover, .slds-listbox_vertical .slds-listbox__option.slds-has-focus, .slds-listbox_vertical .slds-listbox__option:focus, .slds-listbox_vertical .slds-listbox__option:hover{
+    background-color: var(--pru-link-blue5);
+    color: var(--pru-link-blue);
+}
+
+/*Set font size for readonly input items*/
+.slds-input[readonly]{
+    font-size: 1rem;
+}
+
+/*Format standard text input size and borders*/
+.slds-input{
+    width: 30%;
+    border-top: 0px solid;
+    border-left: 0px solid;
+    border-right: 0px solid;
+    border-bottom: 1px solid var(--pru-text-muted);
+    border-radius: 0px;
+}
+
+/*Format standard text input border when active/focus*/
+.slds-input:active, .slds-input:focus{
+    border-bottom: 2px solid var(--pru-link-blue);
+}
+
+/*Format text area input size*/
+.slds-textarea{
+    width: 55%;
+    line-height: 1.3;
+}
+
+/*Format text area border when focus*/
+.slds-textarea:focus{
+    border: 2px solid var(--pru-link-blue);
+}
+
+/*Checkbox label size*/
+.slds-checkbox .slds-checkbox__label .slds-form-element__label{
+    font-size: 15px;
+}
+
+/*Header color*/
+.community_byo-scoped-header-and-footer__header-content{
+    background-color: white;
+}
+
+.community_layout-sldsFlexibleLayout_sldsFlexibleLayout{
+    background-color: var(--pru-sky-blue);
+}
+
+/* .community_layout-section_section .columns-content{
+    background-color: white;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 5px 80px 5px 5px;
+} */
+
+.main-container{
+    background-color: white;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 5px 80px 5px 5px;
+}
+
+.slds-text-heading_medium::first-letter{
+    text-transform: uppercase;
+}
+
+.slds-card__header-title{
+    font-family: "Pru-Modern", sans-serif;
+}
+
+.action-button-container[c-claimsSubmissionDIgital_claimsSubmissionDigital]{
+    justify-content: right;
+}
+
+.community_byo-scoped-header-and-footer__footer-content{
+    background-color: var(--pru-navy);
+}
+
+.form-container[c-claimsSubmissionDigital_claimsSubmissionDigital]{
+    align-items: normal;
+    margin-left: 1em;
+}
+
+.slds-accordian__list-item:first-child{
+    border-top: 1px;
+}
+
+
+:host /* :root */ {
+    /*Evolution Design System*/
+    /*Brand Basics - Colors*/
+
+    /*Primary*/
+    --pru-blue: rgb(0, 123, 195);
+    --pru-navy: rgb(0, 31, 69);
+
+    /*Secondary*/
+    --pru-yellow: rgb(255, 210, 0);
+    --pru-light-blue: rgb(126, 202, 242);
+    --pru-sky-blue: rgb(226, 244, 255);
+
+    /*Tertiary*/
+    --pru-magenta: rgb(159, 46, 137);
+    --pru-teal: rgb(1, 135, 134);
+    --pru-green: rgb(90, 154, 61);
+    --pru-red: rgb(224, 32, 32);
+    --pru-orange: rgb(230, 108, 32);
+    --pru-dark-yellow: rgb(213, 149, 37);
+    --pru-purple: rgb(101, 73, 147);
+
+    /*Tertiary Tints*/
+    --pru-light-purple25: rgb(232, 219, 245);
+    --pru-light-purple10: rgb(246, 240, 251);
+    --pru-light-magenta25: rgb(243, 219, 235);
+    --pru-light-magenta10: rgb(250, 240, 247);
+    --pru-light-teal25: rgb(213, 236, 238);
+    --pru-light-teal10: rgb(242, 249, 249);
+    --pru-light-green25: rgb(224, 238, 209);
+    --pru-light-green10: rgb(243, 248, 236);
+    --pru-red25: rgb(244, 205, 208);
+    --pru-red10: rgb(251, 235, 236);
+    --pru-orange25: rgb(249, 218, 199);
+    --pru-orange10: rgb(252, 240, 232);
+    --pru-dark-yellow25: rgb(244, 228, 200);
+    --pru-dark-yellow10: rgb(251, 2244, 233);
+    --pru-yellow25: rgb(255, 244, 191);
+    --pru-yellow10: rgb(255, 251, 229);
+    --pru-link-blue15: rgb(228, 239, 252);
+    --pru-link-blue5: rgb(242, 247, 253);
+
+    /*Neutrals*/
+    --pru-gray600: rgb(51, 51, 51);
+    --pru-gray500: rgb(102, 102, 102);
+    --pru-gray400: rgb(153, 153, 153);
+    --pru-gray300: rgb(204, 204, 204);
+    --pru-gray200: rgb(235, 235, 235);
+    --pru-gray100: rgb(242, 242, 242);
+
+    /*Text Colors*/
+    --pru-text: rgb(26, 29,30);
+    --pru-text-muted: rgb(113, 113, 113);
+    --pru-text-onBlue: rgb(235, 235, 235);
+    --pru-text-onNavy: rgb(204, 204, 204);
+
+    /*Transparents*/
+    --pru-transparent-black45: rgb(0, 0, 0, .5);
+    --pru-transparent-black20: rgb(0, 0, 0, .2);
+    --pru-transparent-white60: rgb(255, 255, 255, .6);
+    --pru-transparent-white30: rgb(255, 255, 255, .3);
+
+    /*Link*/
+    --pru-link-blue: rgb(0, 102, 204);
+
+    /*Backgrounds*/
+    /*see --pru-sky-blue in secondary*/
+    
+
+
+    /*All Buttons*/
+    /* --dxps-s-button-font-family: */
+    --dxp-s-button-font-weight: 600;
+    --dxp-s-button-font-size: .875rem;
+    --slds-c-button-spacing-block-start: .4rem; /*Top padding*/
+    --slds-c-button-spacing-inline-end: 9.4rem; /*Right padding */
+    --slds-c-button-spacing-block-end: .4rem; /*Botton padding */
+    --slds-c-button-spacing-inline-start: 9.4rem; /*Left padding */
+    --sds-c-button-radius-border: 3rem; /*roundedness*/
+    --dxp-s-button-line-height: 1.5rem;
+    --slds-c-button-sizing-border: 2px;
+    
+/*Default (primary) Buttons*/
+    /*Normal State*/
+    --dxp-s-button-color: var(--pru-text-onBlue); /*Text color */
+    --sds-c-button-color-text: var(--pru-text-onBlue);
+    --slds-c-button-text-color: var(--pru-text-onBlue);
+    --sds-c-button-neutral-color-background: var(--pru-link-blue); /* Background color*/
+    --sds-c-button-neutral-color-border: rgb(255, 255, 255);
+
+    /*Hover State*/
+    --sds-c-button-neutral-color-background-hover: rgb(28, 115, 207);
+    --sds-c-button-neutral-color-border-hover: var(--pru-navy);
+    /* --sds-c-button-neutral-text-color-hover: var(--pru-green); */
+    --dxp-s-button-color-focus: var(--pru-text-onBlue);
+    --dxp-s-button-color-hover: var(--pru-text-onBlue);
+    --sds-c-button-color-text-hover: var(--pru-text-onBlue);
+    --slds-c-button-text-color-hover: var(--pru-text-onBlue);
+
+    /*Active State*/
+    --sds-c-button-neutral-color-background-active: var(--pru-link-blue);
+    --sds-c-button-neutral-color-border-active: rgb(255, 255, 255);
+    --sds-c-button-text-color-active: var(--pru-text-onBlue);
+    --sds-c-button-neutral-spacing-inline-start: 4rem;
+    --sds-c-button-neutral-spacing-inline-end: 4rem;
+
+/*Submit (secondary) Button*/
+    /*Normal State*/
+    --sds-c-button-brand-color-background: var(--pru-yellow);
+    --sds-c-button-brand-text-color: var(--pru-text);
+    --sds-c-button-brand-color-text: var(--pru-text);
+    --sds-c-button-brand-color-border: rgb(255, 255, 255);
+
+    /*Hover State*/
+    --sds-c-button-brand-color-background-hover: rgb(255, 221, 64);
+    --sds-c-button-brand-color-border-hover: var(--pru-navy);
+    --sds-c-button-brand-text-color-hover: var(--pru-text);
+    --dxp-s-button-color-focus-contrast: var(--pru-text);
+    --sds-c-button-brand-color-text-hover: var(--pru-text);
+
+    /*Active State*/
+    --sds-c-button-brand-color-background-active: var(--pru-yellow);
+    --sds-c-button-brand-color-border-active: rgb(255, 255, 255);
+    --sds-c-button-brand-text-color-active: var(--pru-text);
+    --dxp-g-brand-contrast-1: var(--pru-text);
+
+    --dxp-s-button-padding: 4rem; /*blank space on button*/
+
+
+/*Cards*/
+    /*Shape*/
+    --slds-c-card-radius-border: .3rem 2rem .3rem 2rem;
+
+    /*No border above footer*/
+    --slds-c-card-footer-color-border: white;
+
+    /*Button placement - footer*/
+    --slds-c-card-footer-text-align: left;
+
+    /*Header text*/
+    --dxp-s-text-heading-small-font-size: 28px;
+    --dxp-s-text-heading-small-font-family: "Pru-Modern", sans-serif;
+    --dxp-s-text-heading-small-font-weight: 700;
+
+    /*Header padding*/
+    --slds-c-card-header-spacing-inline-start: 1rem;
+    --slds-c-card-header-spacing-block-start: 1rem;
+    --slds-c-card-header-spacing-block-end: 0rem;
+
+    /*Body text*/
+    --dxp-s-body-font-family: "Opensans-Regular", "-apple-system","BlinkMacSystemFont","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif; 
+    --slds-c-card-body-spacing-block-end: 15rem;
+
+    /*Padding*/
+    --dxp-g-spacing-small: 1rem;
+    --slds-c-card-body-spacing-block-start: 0rem;
+
+/*Breadcrumbs*/
+    --dxp-c-link-text-color:var(--pru-link-blue);
+    --dxp-s-body-font-size: 15px; /*also used inside cards and for form*/
+    --dxp-s-body-font-weight: 400;
+    --slds-c-breadcrumbs-spacing-inline-start: 10px;
+    --slds-c-breadcrumbs-spacing-inline-end: 10px;
+
+/*Input dropdown*/
+    --dxp-s-form-element-label-color: var(--pru-text-muted);
+    --dxp-s-form-element-label-font-size: 12px;
+    /* --dxp-s-body-line-height: 1.3rem; */
+
+/*Input basic text */
+    --slds-c-input-shadow: 0 0 0px white;
+    --slds-c-input-shadow-focus: 0 0 0px white;
+
+    /*Input text area*/
+    --sds-c-textarea-color-border-focus: var(--pru-link-blue);
+    --slds-c-textarea-shadow-focus: 0 0 0px white;
+
+/*Checkbox*/
+    --sds-c-checkbox-color-background-checked: var(--pru-link-blue);
+    --sds-c-checkbox-color-border: var(--pru-text);
+    --slds-c-checkbox-color-background-checked: var(--pru-link-blue);
+    --slds-c-checkbox-color-border: var(--pru-text);
+    --sds-c-checkbox-radius-border: 2px;
+    --dxp-g-brand-1: white;
+
+/*Page Title*/
+    --dxp-s-text-heading-medium-font-size: 2.5rem;
+    --dxp-s-text-heading-medium-font-family: "Pru-Modern", sans-serif;
+    --dxp-g-heading-font-family: "Pru-Modern", sans-serif;
+    --dxp-s-text-heading-medium-font-weight: 300 !important;
+    --dxp-c-strong-text-weight: 300;
+    --dxp-s-text-heading-medium-letter-spacing: -0.4px;
+    --dxp-s-text-heading-medium-text-transform: lowercase;
+
+/*Section Title*/
+
+
+
+    /* --dxp-s-text-heading-small-font-size: 1rem;
+    --dxp-s-text-heading-small-font-family: "Opensans-Regular", "-apple-system","BlinkMacSystemFont","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    --dxp-s-text-heading-medium-font-weight: 400;
+    --dxp-s-text-heading-medium-letter-spacing: -.15px; */
+
+/*Accordian*/
+
+    --slds-c-accordion-sizing-border: 1px;
+    --slds-c-accordion-color-border: var(--pru-gray300);
+    --slds-c-accordion-heading-font-size: 17px;
+    --slds-c-accordiaon-section-spacing-block-end: 1rem;
+
+/*Tab Strip*/
+    --slds-c-tabs-item-text-color: var(--pru-link-blue);
+    --slds-c-tabs-item-text-color-active: var(--pru-text);
+    --slds-c-tabs-item-sizing-height: 17px;
+    --slds-c-tabs-item-line-height: 10px;
+
+    
+
+/*Page background*/
+     --dxp-g-root: white;
+
+
+    /*Header background*/
+    /*background-color: darkgreen;*/
+    
+
+    /*Claim details etc. page tracking*/
+    /* --dxp-g-brand: rgb(0,95, 188); */
+    /*Highligted claims details etc.*/
+    /* --dxp-s-link-text-color-1: rgb(128, 128, 128); */
+    /*Secondary color for highlighted claims details etc.
+    Checks in checkboxes*/
+    /* --dxp-g-brand-1: rgb(255, 0, 0); */
+
+    /* Main Text */
+    /* --dxp-g-root-contrast: rgb(0, 0, 0); */
+    /*Highlight color */
+    /* --dxp-g-neutral: rgb(255, 255, 0); */
+    /*Highlighted TEXT color */
+    /* --dxp-g-neutral-contrast: rgb(0, 255, 255); */
+
+    /*Form boxes and placeholder text*/
+    /* --dxp-g-neutral-3: rgb(255, 0, 255); */
+};

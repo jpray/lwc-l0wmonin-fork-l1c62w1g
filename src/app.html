@@ -1,0 +1,175 @@
+<html>
+
+<body>
+	<template>
+		<div class="app slds-p-around_x-large">
+
+<lightning-accordion class="example-accordion" onsectiontoggle={handleToggleSection} active-section-name="B">
+				<lightning-accordion-section name="A" label="Accordion Title A">
+					<!-- <lightning-button-menu slot="actions"
+																			alternative-text="Show menu"
+																			icon-size="x-small"
+																			menu-alignment="right">
+										<lightning-menu-item value="New" label="Menu Item One"></lightning-menu-item>
+										<lightning-menu-item value="Edit" label="Menu Item Two"></lightning-menu-item>
+								</lightning-button-menu> -->
+					<p>This is the content area for section A.</p>
+					<p>.</p>
+					<p>.</p>
+					<p>.</p>
+					<p>The section height expands to fit your content.</p>
+				</lightning-accordion-section>
+
+				<lightning-accordion-section name="B" label="Accordion Title B">
+					<p>This is the content area for section B.</p>
+					<p>.</p>
+					<p>.</p>
+					<p>.</p>
+					<p>The section height expands to fit your content.</p>
+				</lightning-accordion-section>
+
+				<lightning-accordion-section name="C" label="Accordion Title C">
+					<p>This is the content area for section C.</p>
+					<p>.</p>
+					<p>.</p>
+					<p>.</p>
+					<p>The section height expands to fit your content.</p>
+				</lightning-accordion-section>
+			</lightning-accordion>
+			<p><br><br></p>
+			<lightning-tabset>
+				<lightning-tab label="Item One">
+					One Content !
+				</lightning-tab>
+				<lightning-tab label="Item Two" title="2nd tab extended title">
+					Two Content !
+				</lightning-tab>
+				<lightning-tab label="Item Three">
+					Three Content !
+				</lightning-tab>
+			</lightning-tabset>
+			<p><br><br></p>
+			<lightning-radio-group name="radioGroup" label="Radio Group" options={rg_options} value={rg_value} type="radio">
+			</lightning-radio-group>
+			<p><br><br></p>
+
+			<div class="slds-size_3-of-4">
+				<div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">Basic Carousel
+					<lightning-carousel>
+						<lightning-carousel-image src="https://www.lightningdesignsystem.com/assets/images/carousel/carousel-01.jpg"
+							header="First Card" description="First card description."
+							alternative-text="First card accessible description." href="javascript:void(0);">
+						</lightning-carousel-image>
+						<lightning-carousel-image src="https://www.lightningdesignsystem.com/assets/images/carousel/carousel-02.jpg"
+							header="Second Card" description="Second card description."
+							alternative-text="Second card accessible description." href="javascript:void(0);">
+						</lightning-carousel-image>
+						<lightning-carousel-image src="https://www.lightningdesignsystem.com/assets/images/carousel/carousel-03.jpg"
+							header="Third Card" description="Third card description."
+							alternative-text="Third card accessible description." href="javascript:void(0);">
+						</lightning-carousel-image>
+					</lightning-carousel>
+				</div>
+			</div>
+			<p><br><br></p>
+			
+			
+			<lightning-breadcrumbs>
+				<lightning-breadcrumb label="Parent Account" href="http://example.com/parent">
+				</lightning-breadcrumb>
+				<lightning-breadcrumb label="Case" href="http://example.com/case">
+				</lightning-breadcrumb>
+			</lightning-breadcrumbs>
+			<p><br><br></p>
+
+			<lightning-button variant="brand" label="Start" title="Begins the task" onclick={handleClick}>
+			</lightning-button>
+			<lightning-button label="Neutral" title="Non-primary action" onclick={handleClick} class="slds-m-left_x-small">
+			</lightning-button>
+			<p><br><br></p>
+
+			<lightning-card title="Hello">
+				<lightning-button label="New" slot="actions"></lightning-button>
+				<p class="slds-p-horizontal_small">Card Body (custom component)</p>
+				<p slot="footer">Card Footer</p>
+			</lightning-card>
+			<p><br><br></p>
+
+			<lightning-checkbox-group name="Checkbox Group" label="Checkbox Group" options={options} value={value}
+				onchange={handleChange}></lightning-checkbox-group>
+			<p>Selected Values are: {selectedValues}</p>
+			<p><br><br></p>
+
+			<lightning-combobox name="progress" label="Status" value={cb_value} placeholder="Select Progress"
+				options={cb_options} onchange={cb_handleChange}></lightning-combobox>
+
+			<p>Selected value is: {value}</p>
+			<p><br><br></p>
+
+			<div class="slds-m-top_medium slds-m-bottom_x-large">
+				<h2 class="slds-text-heading_medium slds-m-bottom_medium">
+					A text input field.
+				</h2>
+
+				<!-- Default/basic -->
+				<div class="slds-p-around_medium lgc-bg">
+					<lightning-input type="text" label="Enter some text"></lightning-input>
+				</div>
+			</div>
+			<p><br><br></p>
+
+			
+
+
+
+			<p id="utility" class="slds-box slds-text-heading_small">Utility icons are used throughout the interface and are
+				SVGs for extensibility. <br /><br />
+				<lightning-icon icon-name="utility:connected_apps" alternative-text="Connected" title="Connected">
+				</lightning-icon>
+				<lightning-icon icon-name="utility:warning" alternative-text="Warning!" title="Warning"></lightning-icon>
+				<lightning-icon icon-name="utility:error" alternative-text="Error!" title="Error"></lightning-icon>
+				<lightning-icon icon-name="utility:image" alternative-text="Utility image" title="Image"></lightning-icon>
+			</p>
+			<p><br><br></p>
+
+
+
+
+
+
+			<lightning-slider label="Volume" value={sl_val}></lightning-slider>
+			<p><br><br></p>
+
+			<div style="height: 300px;">
+				<lightning-datatable key-field="id" data={data} columns={columns}>
+				</lightning-datatable>
+			</div>
+			<p><br><br></p>
+			<!-- 
+				<div class="exampleHolder">
+        	<lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+    		</div>
+				<p><br><br></p> -->
+
+			<lightning-progress-indicator current-step="step2">
+				<lightning-progress-step label="Step One" value="step1">
+				</lightning-progress-step>
+				<lightning-progress-step label="Step Two" value="step2">
+				</lightning-progress-step>
+				<lightning-progress-step label="Step Three" value="step3">
+				</lightning-progress-step>
+			</lightning-progress-indicator>
+			<p><br><br></p>
+
+			<div class="slds-p-around_medium lgc-bg">
+				Subscribe
+				<lightning-helptext content="You'll receive weekly updates"></lightning-helptext>
+			</div>
+			<p><br><br></p>
+
+
+		</div>
+	</template>
+</body>
+
+</html>
